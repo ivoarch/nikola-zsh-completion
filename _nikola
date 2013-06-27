@@ -103,7 +103,7 @@ case "$words[1]" in
     ;;
   deploy) 
     _message -e 'Purpose: Deploy the site.'
-    _message -e 'Usage:   nikola serve'
+    _message -e 'Usage:   nikola deploy'
     ;;
   dumpdb)
     _command_args=(
