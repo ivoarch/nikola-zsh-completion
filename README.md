@@ -1,5 +1,9 @@
 nikola-zsh-completion
 =====================
+`_nikola` is zsh completion script for <http://nikola.ralsina.com.ar/>
 
-![Screenshot1](https://raw.github.com/ivoarch/nikola-zsh-completion/master/img/screenshot01.png)
-![Screenshot2](https://raw.github.com/ivoarch/nikola-zsh-completion/master/img/screenshot02.png)
+[Screenshots](https://github.com/ivoarch/nikola-zsh-completion/tree/master/img)
+
+## Installation
+
+put `_nikola` file to zsh functions directory (/usr/share/zsh/site-functions/)
