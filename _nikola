@@ -1,24 +1,5 @@
 #compdef nikola
 
-# ------------------------------------------------------------------------------
-# Description
-# -----------
-#
-# ZSH Completion script for Nikola (http://nikola.ralsina.com.ar).
-# -----------------------------------------------------------------------------
-#
-# Installation
-# ------------
-# Add this file to the fpath directory.
-# To check these run 'echo $fpath' in console.
-# 
-# ------------------------------------------------------------------------------
-# Authors
-# -------
-#
-# * Ivaylo Kuzev (https://github.com/ivoarch)
-# ------------------------------------------------------------------------------
-
 local -a _1st_arguments
 _1st_arguments=(
             'auto: automatically execute tasks when a dependency changes'
