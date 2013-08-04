@@ -2,8 +2,15 @@ nikola-zsh-completion
 =====================
 `_nikola` is zsh completion script for <http://nikola.ralsina.com.ar/>
 
-[Screenshots](https://github.com/ivoarch/nikola-zsh-completion/tree/master/img)
+Installation
+---------------
 
-## Installation
+#### Manual
+- Clone with Git by doing:
 
-put `_nikola` file to zsh functions directory (/usr/share/zsh/site-functions/)
+    git clone https://github.com/ivoarch/nikola-zsh-completion
+
+- put `_nikola` file to zsh functions directory (/usr/share/zsh/site-functions/)
+
+#### Using packages
+- Archlinux/[AUR](https://aur.archlinux.org/packages/nikola-zsh-completion/) 
