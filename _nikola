@@ -46,7 +46,7 @@ case "$words[1]" in
     _command_args=(
       '(-n|--name)'{-n,--name}'[New theme name (default: custom)]' \
       '-s[Name of the swatch from bootswatch.com.]' \
-      '(-p|--parrent)'{-p,--parent}'[Parent theme name (default: site)]' \
+      '(-p|--parrent)'{-p,--parent}'[Parent theme name (default: bootstrap3)]' \
     )
     ;;
   build)
