@@ -2,7 +2,7 @@
 
 local -a _1st_arguments
 _1st_arguments=(
-    'auto: automatically execute tasks when a dependency changes'
+    'auto: automatically detect site changes, rebuild and optionally refresh a browser'
     'bootswatch_theme: Given a swatch name from bootswatch.com and a parent theme, creates a custom theme.'
     'build: run tasks.'
     'check: Check links and files in the generated site.'
@@ -38,9 +38,8 @@ local -a _command_args
 case "$words[1]" in
   auto)
     _command_args=(
-      '--db-file[file used to save successful runs]' \
-      '--backend[Select dependency file backend.Available options dbm, json, sqlite3. (default: dbm)]' \
-      '(-v|--verbosity)'{-v,--verbosity}'[0 capture (do not print) stdout/stderr | 1 capture stdout only | 2 do not capture anything from task.]' \
+      '-b[Start a web browser.]' \
+      '(-p|--port)'{-p,--port}'[Port nummber (default: 8000)]' \
     )
     ;;
   bootswatch_theme)

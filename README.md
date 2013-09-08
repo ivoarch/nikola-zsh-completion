@@ -1,6 +1,6 @@
 nikola-zsh-completion
 =====================
-`_nikola` is zsh completion script for <http://nikola.ralsina.com.ar/>
+`_nikola` is zsh completion script for <http://getnikola.com/>
 
 Installation
 ---------------
@@ -13,4 +13,4 @@ Installation
 - put `_nikola` file to zsh functions directory (/usr/share/zsh/site-functions/)
 
 #### Using packages
-- Archlinux/[AUR](https://aur.archlinux.org/packages/nikola-zsh-completion/) 
+- Archlinux/[AUR](https://aur.archlinux.org/packages/nikola-zsh-completion/)
