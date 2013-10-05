@@ -59,6 +59,7 @@ case "$words[1]" in
       '(-o|--output-file)'{-o,--output-file}'[write output into file (default: stdout)]' \
       '(-n|--process)'{-n,--process}'[number of subprocesses(default: 0)]' \
       '(-P|--parallel-type)'{-P,--parallel-type}'[Tasks can be executed in parallel in different ways: process,thread, default]' \
+      '(-q|--quiet)'{-q,--quiet}'[Run quietly.]' \
      )
      ;;
   check)
