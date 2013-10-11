@@ -99,8 +99,10 @@ case "$words[1]" in
     )
     ;;
   help)
-      _message -e 'Purpose: show help'
-      _message -e 'Usage:   nikola help'
+    _command_args=()
+      compadd "$@" auto bootswatch_theme build check clean console deploy dumpdb forget \
+                   help ignore import_blogger import_feed import_wordpress init install_theme \
+                   list mincss new_post run serve strace version \
     ;;
   ignore)
     _command_args=(
