@@ -46,7 +46,7 @@ case "$words[1]" in
     _command_args=(
       '(-n|--name)'{-n,--name}'[New theme name (default: custom)]' \
       '-s[Name of the swatch from bootswatch.com]' \
-      '(-p|--parrent)'{-p,--parent}'[Parent theme name (default: bootstrap3)]' \
+      '(-p|--parent)'{-p,--parent}'[Parent theme name (default: bootstrap3)]' \
     )
     ;;
   build)
@@ -182,7 +182,7 @@ case "$words[1]" in
    serve)
     _command_args=(
       '(-p|--port)'{-p,--port}'[Port number (default: 8000)]' \
-      '(-a|----address)'{-a,----address}'[Address to bind (default: 127.0.0.1)]' \
+      '(-a|--address)'{-a,--address}'[Address to bind (default: 127.0.0.1)]' \
     )
     ;;
    strace)
