@@ -2,29 +2,29 @@
 
 local -a _1st_arguments
 _1st_arguments=(
-    'auto: automatically detect site changes, rebuild and optionally refresh a browser'
-    'bootswatch_theme: Given a swatch name from bootswatch.com and a parent theme, creates a custom theme.'
-    'build: run tasks.'
-    'check: Check links and files in the generated site.'
-    'clean: clean action / remove targets'
-    'console: Start an interactive python console with access to your site and configuration.'
-    'deploy: Deploy the site.'
-    'dumpdb: dump dependency DB'
-    'forget: clear successful run status from internal DB'
-    'help: show help.'
-    'ignore: ignore task (skip) on subsequent runs.'
-    'import_blogger: Import a blogger dump.'
-    'import_feed: Import a RSS/Atom dump.'
-    'import_wordpress: Import a wordpress dump.'
-    'init: Create a Nikola site in the specified folder.'
-    'install_theme: Install theme into current site.'
-    'list: list tasks from dodo file'
-    'mincss: Apply mincss to the generated site.'
-    'new_post: Create a new blog post or site page.'
-    'run: run tasks'
-    'serve: Start the test webserver.'
-    'strace: use strace to list file_deps and targets'
-    'version: Print the Nikola version number.'
+    'auto:Automatically detect site changes, rebuild and optionally refresh a browser'
+    'bootswatch_theme:Given a swatch name from bootswatch.com and a parent theme, creates a custom theme'
+    'build:Run tasks'
+    'check:Check links and files in the generated site'
+    'clean:Clean action / remove targets'
+    'console:Start an interactive python console with access to your site and configuration'
+    'deploy:Deploy the site'
+    'dumpdb:Dump dependency DB'
+    'forget:Clear successful run status from internal DB'
+    'help:Show help'
+    'ignore:Ignore task (skip) on subsequent runs'
+    'import_blogger:Import a blogger dump'
+    'import_feed:Import a RSS/Atom dump'
+    'import_wordpress:Import a wordpress dump'
+    'init:Create a Nikola site in the specified folder'
+    'install_theme:Install theme into current site'
+    'list:List tasks from dodo file'
+    'mincss:Apply mincss to the generated site'
+    'new_post:Create a new blog post or site page'
+    'run:Run tasks'
+    'serve:Start the test webserver'
+    'strace:Use strace to list file_deps and targets'
+    'version:Print the Nikola version number'
    )
 
 _arguments '*:: :->command'
@@ -38,28 +38,28 @@ local -a _command_args
 case "$words[1]" in
   auto)
     _command_args=(
-      '-b[Start a web browser.]' \
-      '(-p|--port)'{-p,--port}'[Port nummber (default: 8000)]' \
+      '-b[Start a web browser]' \
+      '(-p|--port)'{-p,--port}'[Port number (default: 8000)]' \
     )
     ;;
   bootswatch_theme)
     _command_args=(
       '(-n|--name)'{-n,--name}'[New theme name (default: custom)]' \
-      '-s[Name of the swatch from bootswatch.com.]' \
-      '(-p|--parrent)'{-p,--parent}'[Parent theme name (default: bootstrap3)]' \
+      '-s[Name of the swatch from bootswatch.com]' \
+      '(-p|--parent)'{-p,--parent}'[Parent theme name (default: bootstrap3)]' \
     )
     ;;
   build)
     _command_args=(
-      '(-a|--always-execute)'{-a,--always-execute}'[always execute tasks even if up-to-date (default: False)]' \
-      '(-c|--continue)'{-c,--continue}'[continue executing tasks even after a failure (default: False)]' \
+      '(-a|--always-execute)'{-a,--always-execute}'[Always execute tasks even if up-to-date (default: False)]' \
+      '(-c|--continue)'{-c,--continue}'[Continue executing tasks even after a failure (default: False)]' \
       '--no-continue[opposite of --continue]' \
       '(-v|--verbosity)'{-v,--verbosity}'[0 capture (do not print) stdout/stderr | 1 capture stdout only | 2 do not capture anything from task.]' \
-      '(-r|--reporter)'{-r,--reporter}'[Choose output reporter. Available:default, executed-only, json]' \
-      '(-o|--output-file)'{-o,--output-file}'[write output into file (default: stdout)]' \
-      '(-n|--process)'{-n,--process}'[number of subprocesses(default: 0)]' \
+      '(-r|--reporter)'{-r,--reporter}'[Choose output reporter. Available: default, executed-only, json]' \
+      '(-o|--output-file)'{-o,--output-file}'[Write output into file (default: stdout)]' \
+      '(-n|--process)'{-n,--process}'[Number of subprocesses(default: 0)]' \
       '(-P|--parallel-type)'{-P,--parallel-type}'[Tasks can be executed in parallel in different ways: process,thread, default]' \
-      '(-q|--quiet)'{-q,--quiet}'[Run quietly.]' \
+      '(-q|--quiet)'{-q,--quiet}'[Run quietly]' \
      )
      ;;
   check)
@@ -67,20 +67,20 @@ case "$words[1]" in
       '(-l|--check-links)'{-l,--check-links}'[Check for dangling links]' \
       '(-f|--check-files)'{-f,--check-files}'[Check for unknown files]' \
       '--clean-files[Remove all unknown files, use with caution]' \
-      '--find-sources[List possible source files for files with broken links.]' \
+      '--find-sources[List possible source files for files with broken links]' \
     )
     ;;
   clean)
     _command_args=(
-      '--db-file[file used to save successful runs]' \
-      '--backend[Select dependency file backend.Available options dbm, json, sqlite3. (default: dbm)]' \
-      '(-c|--clean-dep)'{-c,--clean-dep}'[clean task dependencies too]' \
-      '(-a|--clean-all)'{-a,--clean-all}'[clean all task]' \
-      '(-n|--dry-run)'{-n,--dry-run}'[print actions without really executing them]' \
+      '--db-file[File used to save successful runs]' \
+      '--backend[Select dependency file backend. Available options dbm, json, sqlite3. (default: dbm)]' \
+      '(-c|--clean-dep)'{-c,--clean-dep}'[Clean task dependencies too]' \
+      '(-a|--clean-all)'{-a,--clean-all}'[Clean all task]' \
+      '(-n|--dry-run)'{-n,--dry-run}'[Print actions without really executing them]' \
     )
     ;;
   console)
-      _message -e 'Purpose: Start an interactive python console with access to your site and configuration.'
+      _message -e 'Purpose: Start an interactive python console with access to your site and configuration'
       _message -e 'Usage:   nikola console'
     ;;
   deploy)
@@ -89,13 +89,13 @@ case "$words[1]" in
     ;;
   dumpdb)
     _command_args=(
-      '--db-file[file used to save successful runs]' \
+      '--db-file[File used to save successful runs]' \
     )
     ;;
   forget)
     _command_args=(
-      '--db-file[file used to save successful runs]' \
-      '--backend[Select dependency file backend.Available options dbm, json, sqlite3. (default: dbm)]' \
+      '--db-file[File used to save successful runs]' \
+      '--backend[Select dependency file backend. Available options dbm, json, sqlite3. (default: dbm)]' \
     )
     ;;
   help)
@@ -106,49 +106,49 @@ case "$words[1]" in
     ;;
   ignore)
     _command_args=(
-      '--db-file[file used to save successful runs]' \
-      '--backend[Select dependency file backend.Available options dbm, json, sqlite3. (default: dbm)]' \
+      '--db-file[File used to save successful runs]' \
+      '--backend[Select dependency file backend. Available options dbm, json, sqlite3. (default: dbm)]' \
     )
     ;;
   import_blogger)
     _command_args=(
-      '(-o|--output-folder)'{-o,--output-folder}'[Location to write imported content.]' \
-      '(-d|--no-drafts)'{-d,--no-drafts}'[Don t import drafts]' \
+      '(-o|--output-folder)'{-o,--output-folder}'[Location to write imported content]' \
+      '(-d|--no-drafts)'{-d,--no-drafts}'[Do not import drafts]' \
     )
     ;;
   import_feed)
     _command_args=(
-      '(-o|--output-folder)'{-o,--output-folder}'[Location to write imported content.]' \
+      '(-o|--output-folder)'{-o,--output-folder}'[Location to write imported content]' \
     )
     ;;
    import_wordpress)
     _command_args=(
-      '(-o|--output-folder)'{-o,--output-folder}'[Location to write imported content.]' \
-      '(-d|--no-drafts)'{-d,--no-drafts}'[Don t import drafts]' \
+      '(-o|--output-folder)'{-o,--output-folder}'[Location to write imported content]' \
+      '(-d|--no-drafts)'{-d,--no-drafts}'[Do not import drafts]' \
       '--squash-newlines[Shorten multiple newlines in a row to only two newlines]' \
       '--no-downloads[Do not try to download files for the import]' \
     )
     ;;
    init)
     _command_args=(
-      '--demo[Create a site filled with example data.]' \
+      '--demo[Create a site filled with example data]' \
     )
     ;;
    install_theme)
     _command_args=(
-      '(-l|--list)'{-l,--list}'[Show list of available themes.]' \
+      '(-l|--list)'{-l,--list}'[Show list of available themes]' \
       '(-u|--url)'{-u,--url}'[URL for the theme repository (default: http://nikola.ralsina.com.ar/themes/index.json)]' \
     )
     ;;
    list)
     _command_args=(
-      '--db-file[file used to save successful runs]' \
-      '--backend[Select dependency file backend.Available options dbm, json, sqlite3. (default: dbm)]' \
-      '--all[list include all sub-tasks from dodo file]' \
-      '(-q|--quiet)'{-q,--quiet}'[print just task name (less verbose than default)]' \
-      '(-s|--status)'{-s,--status}'[print task status (R)un, (U)p-to-date, (I)gnored]' \
-      '(-p|--private)'{-p,--private}'[print private tasks (start with "_")]' \
-      '--deps[print list of dependencies (file dependencies only)]' \
+      '--db-file[File used to save successful runs]' \
+      '--backend[Select dependency file backend. Available options dbm, json, sqlite3. (default: dbm)]' \
+      '--all[List include all sub-tasks from dodo file]' \
+      '(-q|--quiet)'{-q,--quiet}'[Print just task name (less verbose than default)]' \
+      '(-s|--status)'{-s,--status}'[Print task status (R)un, (U)p-to-date, (I)gnored]' \
+      '(-p|--private)'{-p,--private}'[Print private tasks (start with "_")]' \
+      '--deps[Print list of dependencies (file dependencies only)]' \
     )
     ;;
     mincss)
@@ -157,9 +157,9 @@ case "$words[1]" in
     ;;
    new_post)
     _command_args=(
-      '(-p|--page)'{-p,--page}'[Create a page instead of a blog post.]' \
-      '(-t|--title)'{-t,--title}'[Title for the page/post.]' \
-      '--tags[Comma-separated tags for the page/post.]' \
+      '(-p|--page)'{-p,--page}'[Create a page instead of a blog post]' \
+      '(-t|--title)'{-t,--title}'[Title for the page/post]' \
+      '--tags[Comma-separated tags for the page/post]' \
       '-1[Create post with embedded metadata (single file format)]' \
       '-2[Create post with separate metadata (two file format)]' \
       '(-f|--format)'{-f,--format}'[Markup format for post, one of rest, markdown, wiki, bbcode, html, textile, txt2tags]' \
@@ -167,35 +167,35 @@ case "$words[1]" in
     ;;
    run)
     _command_args=(
-      '--db-file[file used to save successful runs]' \
-      '--backend[Select dependency file backend.Available options dbm, json, sqlite3. (default: dbm)]' \
-      '(-a|--always-execute)'{-a,--always-execute}'[always execute tasks even if up-to-date (default: False)]' \
-      '(-c|--continue)'{-c,--continue}'[continue executing tasks even after a failure (default: False)]' \
-      '--no-continue[opposite of --continue]' \
+      '--db-file[File used to save successful runs]' \
+      '--backend[Select dependency file backend. Available options dbm, json, sqlite3. (default: dbm)]' \
+      '(-a|--always-execute)'{-a,--always-execute}'[Always execute tasks even if up-to-date (default: False)]' \
+      '(-c|--continue)'{-c,--continue}'[Continue executing tasks even after a failure (default: False)]' \
+      '--no-continue[Opposite of --continue]' \
       '(-v|--verbosity)'{-v,--verbosity}'[0 capture (do not print) stdout/stderr | 1 capture stdout only | 2 do not capture anything from task.]' \
-      '(-r|--reporter)'{-r,--reporter}'[Choose output reporter. Available:default, executed-only, json]' \
-      '(-o|--output-file)'{-o,--output-file}'[write output into file (default: stdout)]' \
-      '(-n|--process)'{-n,--process}'[number of subprocesses(default: 0)]' \
+      '(-r|--reporter)'{-r,--reporter}'[Choose output reporter. Available: default, executed-only, json]' \
+      '(-o|--output-file)'{-o,--output-file}'[Write output into file (default: stdout)]' \
+      '(-n|--process)'{-n,--process}'[Number of subprocesses (default: 0)]' \
       '(-P|--parallel-type)'{-P,--parallel-type}'[Tasks can be executed in parallel in different ways: process,thread, default]' \
     )
     ;;
    serve)
     _command_args=(
-      '(-p|--port)'{-p,--port}'[Port nummber (default: 8000)]' \
-      '(-a|----address)'{-a,----address}'[Address to bind (default: 127.0.0.1)]' \
+      '(-p|--port)'{-p,--port}'[Port number (default: 8000)]' \
+      '(-a|--address)'{-a,--address}'[Address to bind (default: 127.0.0.1)]' \
     )
     ;;
    strace)
     _command_args=(
-      '--db-file[file used to save successful runs]' \
-      '--backend[Select dependency file backend.Available options dbm, json, sqlite3. (default: dbm)]' \
-      '(-a|--all)'{-a,--all}'[display all files (not only from within CWD path)]' \
-      '(-k|--keep)'{-k,--keep}'[save strace command output into strace.txt]' \
+      '--db-file[File used to save successful runs]' \
+      '--backend[Select dependency file backend. Available options dbm, json, sqlite3. (default: dbm)]' \
+      '(-a|--all)'{-a,--all}'[Display all files (not only from within CWD path)]' \
+      '(-k|--keep)'{-k,--keep}'[Save strace command output into strace.txt]' \
     )
     ;;
    version)
       _message -e 'Purpose: Print the Nikola version number.'
-      _message -e 'Usage:   nikola version.'
+      _message -e 'Usage:   nikola version'
     ;;
 
     esac
